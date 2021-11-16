@@ -1,0 +1,108 @@
+#Copyright (C) 2021 HiHope Open Source Organization .
+#Licensed under the Apache License, Version 2.0 (the "License");
+#you may not use this file except in compliance with the License.
+#You may obtain a copy of the License at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+#Unless required by applicable law or agreed to in writing, software
+#distributed under the License is distributed on an "AS IS" BASIS,
+#WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#See the License for the specific language governing permissions and
+#limitations under the License.
+
+import("//build/ohos.gni")
+import("//build/ohos/ndk/ndk.gni")
+
+config("libtinyalsa_config") {
+  include_dirs = [
+                  "include",
+                  "include/tinyalsa",
+                 ]
+  cflags = [
+    "-Wno-incompatible-pointer-types",
+    "-Werror",
+    "-Wimplicit-function-declaration",
+    "-Wno-error=unused-variable",
+    "-Wno-macro-redefined",
+  ]
+}
+
+ohos_shared_library("libtinyalsa") {
+  sources = [
+             "src/mixer.c",
+             "src/mixer_hw.c",
+             "src/mixer_plugin.c",
+             "src/pcm.c",
+             "src/pcm_hw.c",
+             "src/pcm_plugin.c",
+             "src/snd_card_plugin.c",
+            ]
+
+  install_images = [
+    "system",
+    "updater",
+  ]
+  install_enable = true
+  configs = [ ":libtinyalsa_config" ]
+
+  subsystem_name = "hdf"
+}
+
+#ohos_executable("tinycap") {
+#
+#  sources = [
+#    "tinycap.c",
+#  ]
+#
+#  configs = [ ":libtinyalsa_config" ]
+#  deps = [
+#    ":libtinyalsa",
+#  ]
+#
+#  install_images = [
+#    "system",
+#    "updater",
+#  ]
+#  install_enable = true
+#
+#  subsystem_name = "hdf"
+#}
+#
+#ohos_executable("tinyplay") {
+#  sources = [
+#    "tinyplay.c",
+#  ]
+#
+#  configs = [ ":libtinyalsa_config" ]
+#  deps = [
+#    ":libtinyalsa",
+#  ]
+#
+#  install_images = [
+#    "system",
+#    "updater",
+#  ]
+#  install_enable = true
+#
+#  subsystem_name = "hdf"
+#}
+#
+#ohos_executable("tinymix") {
+#  sources = [
+#    "tinymix.c",
+#  ]
+#
+#  configs = [ ":libtinyalsa_config" ]
+#  deps = [
+#    ":libtinyalsa",
+#  ]
+#  install_enable = true
+#
+#  install_images = [
+#    "system",
+#    "updater",
+#  ]
+#
+#  subsystem_name = "hdf"
+#}

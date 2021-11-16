@@ -82,6 +82,18 @@
 #define ARRAY_SIZE(a) (sizeof(a) / sizeof((a)[0]))
 #endif
 
+#ifndef INT_MAX
+#define INT_MAX  2147483647
+#endif
+
+#ifndef UINT_MAX
+#define UINT_MAX 4294967295UL
+#endif
+
+#ifndef ULONG_MAX
+#define ULONG_MAX 4294967295UL
+#endif
+
 /* refer to SNDRV_PCM_ACCESS_##index in sound/asound.h. */
 static const char * const access_lookup[] = {
         "MMAP_INTERLEAVED",
@@ -614,6 +626,16 @@ static int pcm_sync_ptr(struct pcm *pcm, int flags)
     }
 
     return 0;
+}
+
+int pcm_state(struct pcm *pcm)
+{
+    // Update the state only. Do not sync HW sync.
+    int err = pcm_sync_ptr(pcm, SNDRV_PCM_SYNC_PTR_APPL | SNDRV_PCM_SYNC_PTR_AVAIL_MIN);
+    if (err < 0)
+        return err;
+
+    return pcm->mmap_status->state;
 }
 
 static int pcm_hw_mmap_status(struct pcm *pcm)
@@ -1189,6 +1211,10 @@ int pcm_prepare(struct pcm *pcm)
  */
 int pcm_start(struct pcm *pcm)
 {
+    if (pcm_state(pcm) == PCM_STATE_SETUP && pcm_prepare(pcm) != 0) {
+        return -1;
+    }
+
     /* set appl_ptr and avail_min in kernel */
     if (pcm_sync_ptr(pcm, 0) < 0)
         return -1;
@@ -1400,15 +1426,6 @@ again:
 
     /* SYNC_PTR ioctl was used, no need to check avail */
     return 0;
-}
-
-int pcm_state(struct pcm *pcm)
-{
-    int err = pcm_sync_ptr(pcm, 0);
-    if (err < 0)
-        return err;
-
-    return pcm->mmap_status->state;
 }
 
 /** Waits for frames to be available for read or write operations.

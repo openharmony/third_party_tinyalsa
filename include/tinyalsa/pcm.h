@@ -327,13 +327,13 @@ int pcm_get_htimestamp(struct pcm *pcm, unsigned int *avail, struct timespec *ts
 
 unsigned int pcm_get_subdevice(const struct pcm *pcm);
 
-int pcm_writei(struct pcm *pcm, const void *data, unsigned int frame_count) TINYALSA_WARN_UNUSED_RESULT;
+int pcm_writei(struct pcm *pcm, const void *data, unsigned int frame_count);
 
-int pcm_readi(struct pcm *pcm, void *data, unsigned int frame_count) TINYALSA_WARN_UNUSED_RESULT;
+int pcm_readi(struct pcm *pcm, void *data, unsigned int frame_count);
 
-int pcm_write(struct pcm *pcm, const void *data, unsigned int count) TINYALSA_DEPRECATED;
+int pcm_write(struct pcm *pcm, const void *data, unsigned int count);
 
-int pcm_read(struct pcm *pcm, void *data, unsigned int count) TINYALSA_DEPRECATED;
+int pcm_read(struct pcm *pcm, void *data, unsigned int count);
 
 int pcm_mmap_write(struct pcm *pcm, const void *data, unsigned int count) TINYALSA_DEPRECATED;
 
