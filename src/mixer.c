@@ -62,6 +62,18 @@
 
 #include "mixer_io.h"
 
+#ifndef INT_MAX
+#define INT_MAX  2147483647
+#endif
+
+#ifndef UINT_MAX
+#define UINT_MAX 4294967295UL
+#endif
+
+#ifndef ULONG_MAX
+#define ULONG_MAX 4294967295UL
+#endif
+
 /** A mixer control.
  * @ingroup libtinyalsa-mixer
  */
