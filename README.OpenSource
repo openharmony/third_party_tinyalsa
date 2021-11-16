@@ -1,12 +1,11 @@
-
 [
     {
-        "Name"                  : "tinyalsa",
-        "License"               : "BSD 3-Clause License",
-        "License File"          : "COPYING",
-        "Version Number"        : "2.0.0",
-        "Owner"                 : "dvdli@google.com,gkasten@google.com",
-        "Upstream URL"          : "https://github.com/tinyalsa/tinyalsa/tree/v2.0.0",
-        "Description"           : "a small library to interface with ALSA in the Linux kernel."
+        "Name": "tinyalsa",
+        "License": "BSD 3-Clause License",
+        "License File": "COPYING",
+        "Version Number": "2.0.0",
+        "Owner": "dvdli@google.com,gkasten@google.com",
+        "Upstream URL": "https://github.com/tinyalsa/tinyalsa/tree/v2.0.0",
+        "Description": "a small library to interface with ALSA in the Linux kernel."
     }
 ]
