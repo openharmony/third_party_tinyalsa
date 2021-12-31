@@ -30,26 +30,28 @@
         </policylist>
         <filefilterlist>
             <filefilter name="defaultFilter" desc="Files not to check">
-		<filteritem type="filename" name="Android.bp" desc="script for other platform, it is not used and does not participate in the compilation"/>
-		<filteritem type="filename" name="BUILD" desc="script for other platform, it is not used and does not participate in the compilation"/>
+		    <filteritem type="filename" name="Android.bp" desc="script for other platform, it is not used and does not participate in the compilation"/>
+		    <filteritem type="filename" name="BUILD" desc="script for other platform, it is not used and does not participate in the compilation"/>
 	        <filteritem type="filename" name="CMakeLists.txt" desc="script for other platform, it is not used and does not participate in the compilation"/>
-		<filteritem type="filename" name="Makefile" desc="script for other platform, it is not used and does not participate in the compilation"/>
-		<filteritem type="filename" name="meson.build" desc="script for other platform, it is not used and does not participate in the compilation"/>
-		<filteritem type="filename" name="meson_options.txt" desc="script for other platform, it is not used and does not participate in the compilation"/>
-		<filteritem type="filename" name=".gitignore" desc="gitignore file, does not participate in the compilation"/>
-		<filteritem type="filename" name="WORKSPACE" desc="git_repository file, does not participate in the compilation"/>
-                <filteritem type="filename" name=".travis.yml" desc="other platform build env prepare file, does not participate in the compilation"/>
-		<filteritem type="filename" name="NOTICE" desc="copyright files, does not participate in the compilation"/>
-		<filteritem type="filename" name="MODULE_LICENSE_BSD" desc="copyright files, does not participate in the compilation"/>
-		<filteritem type="filename" name="LICENSE" desc="copyright files, does not participate in the compilation"/>
-		<filteritem type="filename" name="METADATA" desc="copyright files, does not participate in the compilation"/>
-		<filteritem type="filename" name="OWNERS" desc="tinyalsa owners, does not participate in the compilation"/>
-		<filteritem type="filepath" name="tests/.*" desc="tinyalsa unittest files, not participate in compilation"/>
-		<filteritem type="filepath" name="utils/.*" desc="tinyalsa test files, not participate in compilation"/>
-		<filteritem type="filepath" name="examples/.*" desc="tinyalsa example files, not participate in compilation"/>
-		<filteritem type="filepath" name="doxygen/.*" desc="tinyalsa documentation files, not participate in compilation"/>
-		<filteritem type="filepath" name="debian/.*" desc="tinyalsa addpter debian files, not participate in compilation"/>
-		<filteritem type="filepath" name="scripts/.*" desc="tinyalsa script for other platform, not participate in compilation"/>
+		    <filteritem type="filename" name="Makefile" desc="script for other platform, it is not used and does not participate in the compilation"/>
+		    <filteritem type="filename" name="meson.build" desc="script for other platform, it is not used and does not participate in the compilation"/>
+		    <filteritem type="filename" name="meson_options.txt" desc="script for other platform, it is not used and does not participate in the compilation"/>
+		    <filteritem type="filename" name=".gitignore" desc="gitignore file, does not participate in the compilation"/>
+		    <filteritem type="filename" name="WORKSPACE" desc="git_repository file, does not participate in the compilation"/>
+            <filteritem type="filename" name=".travis.yml" desc="other platform build env prepare file, does not participate in the compilation"/>
+		    <filteritem type="filename" name="NOTICE" desc="copyright files, does not participate in the compilation"/>
+		    <filteritem type="filename" name="MODULE_LICENSE_BSD" desc="copyright files, does not participate in the compilation"/>
+		    <filteritem type="filename" name="LICENSE" desc="copyright files, does not participate in the compilation"/>
+		    <filteritem type="filename" name="METADATA" desc="copyright files, does not participate in the compilation"/>
+		    <filteritem type="filename" name="OWNERS" desc="tinyalsa owners, does not participate in the compilation"/>
+		    <filteritem type="filepath" name="tests/.*" desc="tinyalsa unittest files, not participate in compilation"/>
+            <filteritem type="filepath" name="include/.*" desc="tinyalsa files"/>
+		    <filteritem type="filepath" name="src/.*" desc="tinyalsa files"/>
+		    <filteritem type="filepath" name="utils/.*" desc="tinyalsa test files, not participate in compilation"/>
+		    <filteritem type="filepath" name="examples/.*" desc="tinyalsa example files, not participate in compilation"/>
+		    <filteritem type="filepath" name="doxygen/.*" desc="tinyalsa documentation files, not participate in compilation"/>
+		    <filteritem type="filepath" name="debian/.*" desc="tinyalsa addpter debian files, not participate in compilation"/>
+		    <filteritem type="filepath" name="scripts/.*" desc="tinyalsa script for other platform, not participate in compilation"/>
                 <!--filteritem type="filepath" name="projectroot/[a-zA-Z0-9]{20,}.sh" desc="Temp files"/-->
             </filefilter>
             <filefilter name="defaultPolicyFilter" desc="Filters for compatibility，license header policies">
