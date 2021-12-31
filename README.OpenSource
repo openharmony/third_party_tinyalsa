@@ -1,7 +1,7 @@
 [
     {
         "Name": "tinyalsa",
-        "License": "BSD 3-Clause License, The Linux Foundation, The Android Open Source Project",
+        "License": "The Linux Foundation, The Android Open Source Project",
         "License File": "NOTICE",
         "Version Number": "2.0.0",
         "Owner": "dvdli@google.com,gkasten@google.com",
