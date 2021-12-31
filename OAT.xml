@@ -25,7 +25,6 @@
                 <policyitem type="copyright" name="The Linux Foundation." path=".*" rule="may" group="defaultGroup" filefilter="copyrightPolicyFilter" desc="Developed by linux foundation"/>
                 <policyitem type="copyright" name="The Android Open Source Project" path=".*" rule="may" group="defaultGroup" filefilter="copyrightPolicyFilter" desc="Developed by google"/>
                 <policyitem type="copyright" name="HiHope Open Source Organization ." path=".*" rule="may" group="defaultGroup" filefilter="copyrightPolicyFilter" desc="Developed By Hihope"/>
-                <policyitem type="license" name="GPL" path=".*" desc="linux kernel adapter codes"/>
                 <!--policyitem type="copyright" name="xxx" path="abc/.*" rule="may" group="defaultGroup" filefilter="copyrightPolicyFilter" desc="Developed by X Company"/-->
             </policy>
         </policylist>
@@ -39,7 +38,7 @@
 		<filteritem type="filename" name="meson_options.txt" desc="script for other platform, it is not used and does not participate in the compilation"/>
 		<filteritem type="filename" name=".gitignore" desc="gitignore file, does not participate in the compilation"/>
 		<filteritem type="filename" name="WORKSPACE" desc="git_repository file, does not participate in the compilation"/>
-                <filteritem type="filename" name=".travis.yml" desc="other platform build env prepare file, does not participate in the compilation"/>
+        <filteritem type="filename" name=".travis.yml" desc="other platform build env prepare file, does not participate in the compilation"/>
 		<filteritem type="filename" name="NOTICE" desc="copyright files, does not participate in the compilation"/>
 		<filteritem type="filename" name="MODULE_LICENSE_BSD" desc="copyright files, does not participate in the compilation"/>
 		<filteritem type="filename" name="LICENSE" desc="copyright files, does not participate in the compilation"/>
@@ -51,9 +50,7 @@
 		<filteritem type="filepath" name="doxygen/.*" desc="tinyalsa documentation files, not participate in compilation"/>
 		<filteritem type="filepath" name="debian/.*" desc="tinyalsa addpter debian files, not participate in compilation"/>
 		<filteritem type="filepath" name="scripts/.*" desc="tinyalsa script for other platform, not participate in compilation"/>
-        <filteritem type="filepath" name="include/.*" desc="tinyalsa script for other platform, not participate in compilation"/>
-        <filteritem type="filepath" name="src/*" desc="tinyalsa script for other platform, not participate in compilation"/>
-        <filteritem type="filepath" name="LICENSE" desc="tinyalsa script for other platform, not participate in compilation"/>
+        <filteritem type="filepath" name="LICENSE" desc="License file, not participate in compilation"/>
                 <!--filteritem type="filepath" name="projectroot/[a-zA-Z0-9]{20,}.sh" desc="Temp files"/-->
             </filefilter>
             <filefilter name="defaultPolicyFilter" desc="Filters for compatibility，license header policies">
