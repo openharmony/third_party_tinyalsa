@@ -46,6 +46,8 @@
 		<filteritem type="filename" name="OWNERS" desc="tinyalsa owners, does not participate in the compilation"/>
 		<filteritem type="filepath" name="tests/.*" desc="tinyalsa unittest files, not participate in compilation"/>
 		<filteritem type="filepath" name="utils/.*" desc="tinyalsa test files, not participate in compilation"/>
+        <filteritem type="filepath" name="include/.*" desc="tinyalsa files"/>
+		<filteritem type="filepath" name="src/.*" desc="tinyalsa files"/>
 		<filteritem type="filepath" name="examples/.*" desc="tinyalsa example files, not participate in compilation"/>
 		<filteritem type="filepath" name="doxygen/.*" desc="tinyalsa documentation files, not participate in compilation"/>
 		<filteritem type="filepath" name="debian/.*" desc="tinyalsa addpter debian files, not participate in compilation"/>
