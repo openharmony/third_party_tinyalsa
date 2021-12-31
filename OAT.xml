@@ -51,6 +51,9 @@
 		<filteritem type="filepath" name="doxygen/.*" desc="tinyalsa documentation files, not participate in compilation"/>
 		<filteritem type="filepath" name="debian/.*" desc="tinyalsa addpter debian files, not participate in compilation"/>
 		<filteritem type="filepath" name="scripts/.*" desc="tinyalsa script for other platform, not participate in compilation"/>
+        <filteritem type="filepath" name="include/.*" desc="tinyalsa script for other platform, not participate in compilation"/>
+        <filteritem type="filepath" name="src/*" desc="tinyalsa script for other platform, not participate in compilation"/>
+        <filteritem type="filepath" name="LICENSE" desc="tinyalsa script for other platform, not participate in compilation"/>
                 <!--filteritem type="filepath" name="projectroot/[a-zA-Z0-9]{20,}.sh" desc="Temp files"/-->
             </filefilter>
             <filefilter name="defaultPolicyFilter" desc="Filters for compatibility，license header policies">
