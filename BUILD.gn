@@ -47,4 +47,5 @@ ohos_shared_library("libtinyalsa") {
   configs = [ ":libtinyalsa_config" ]
 
   subsystem_name = "hdf"
+  part_name = "audio_device_driver"
 }
